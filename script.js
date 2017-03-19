@@ -4,15 +4,6 @@ $(document).ready(function(){
   var randomQuote;
   var author;
   function getQuote(){
-   /* var quotes = ["BONJOUR !","HOLA !","GUTEN TAG !","OLA !","CIAO !","NAMASTE !","CZEŚĆ !"]
-    var ranA=["-France","-Spanish","-German","-Portuguese","-Italian","-Hindi","-Polish"]
-    
-     randomNum=Math.floor((Math.random()*quotes.length));
-     randomQuote=quotes[randomNum];
-     author=ranA[randomNum];
-    
-   $(".quote").text(randomQuote);
-    $(".author").text(author);*/
     var url="http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
     $.getJSON(url, function(data){
       $(".quote").html('"'+data.quoteText+'"');
